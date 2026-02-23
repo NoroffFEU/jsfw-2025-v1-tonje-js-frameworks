@@ -3,7 +3,6 @@
 @theme {
     --font-heading: var(--font-inter), sans-serif;
     --font-body: var(--font-dm-sans), sans-serif;
-    --font-brand: var(--font-spirax), cursive;
 
     --color-background: #F7F7F5;
     --color-card: #FFFFFF;
@@ -21,4 +20,8 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
+}
+
+.font-brand {
+    font-family: var(--font-spirax), cursive;
 }
