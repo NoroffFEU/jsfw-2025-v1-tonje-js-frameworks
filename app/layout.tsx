@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter, DM_Sans, Spirax } from "next/font/google";
 import "./globals.css";
 
+import Footer from "./components/Footer";
+
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
@@ -32,6 +34,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.variable} ${dmSans.variable} ${spirax.variable}`}>
         {children}
+        <Footer />
       </body>
     </html>
   );
