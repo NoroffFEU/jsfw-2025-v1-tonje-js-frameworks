@@ -25,3 +25,7 @@ export interface Review {
 export interface ApiResponse {
     data: Product[];
 }
+
+export interface ApiSingleProductResponse {
+    data: Product;
+}
