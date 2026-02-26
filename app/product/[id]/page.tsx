@@ -1,5 +1,6 @@
 import Image from "next/image";
 import type { Product, ApiSingleProductResponse } from "../../interfaces/products";
+import AddToCartButton from "../../components/AddToCartButton";
 
 /**
  * Fetches a single product from the API by its ID.
@@ -92,10 +93,8 @@ export default async function ProductPage({
               ))}
             </div>
           )}
-
-          <button className="mt-2 w-full rounded-md bg-accent py-3 font-medium uppercase text-white hover:opacity-90">
-            Add to Cart
-          </button>
+          
+          <AddToCartButton product={product} />
 
           {product.reviews.length > 0 && (
             <div className="mt-4">
