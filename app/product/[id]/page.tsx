@@ -1,6 +1,7 @@
 import Image from "next/image";
 import type { Product, ApiSingleProductResponse } from "../../interfaces/products";
 import AddToCartButton from "../../components/AddToCartButton";
+import BackButton from "../../components/BackButton";
 
 /**
  * Fetches a single product from the API by its ID.
@@ -51,6 +52,7 @@ export default async function ProductPage({
 
   return (
     <main className="mx-auto max-w-5xl px-6 py-12">
+      <BackButton />
       <div className="flex flex-col gap-8 md:flex-row">
         <div className="relative aspect-square w-full md:w-1/2">
           {hasDiscount && (

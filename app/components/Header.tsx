@@ -39,10 +39,10 @@ export default function Header() {
         </Link>
 
         <div className="hidden gap-8 md:flex">
-          <Link href="/" className="hover:text-text-secondary hover:font-semibold">
+          <Link href="/" className="hover:text-text-secondary hover:underline">
             Shop
           </Link>
-          <Link href="/contact" className="hover:text-text-secondary hover:font-semibold">
+          <Link href="/contact" className="hover:text-text-secondary hover:underline">
             Contact Us
           </Link>
         </div>
@@ -67,14 +67,14 @@ export default function Header() {
             <Link
               href="/"
               onClick={() => setIsMenuOpen(false)}
-              className="hover:text-text-secondary hover:font-semibold"
+              className="hover:text-text-secondary hover:underline"
             >
               Shop
             </Link>
             <Link
               href="/contact"
               onClick={() => setIsMenuOpen(false)}
-              className="hover:text-text-secondary hover:font-semibold"
+              className="hover:text-text-secondary hover:underline"
             >
               Contact Us
             </Link>
