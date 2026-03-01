@@ -14,7 +14,6 @@ export default function CartPage() {
   const items = useCartStore((state) => state.items);
   const removeItem = useCartStore((state) => state.removeItem);
   const updateQuantity = useCartStore((state) => state.updateQuantity);
-  const clearCart = useCartStore((state) => state.clearCart);
   const router = useRouter();
 
   const totalPrice = items.reduce(
@@ -23,8 +22,7 @@ export default function CartPage() {
   );
 
   const handleCheckout = () => {
-    clearCart();
-    router.push("/checkout-success");
+    router.push("/checkout");
   };
 
   if (items.length === 0) {
