@@ -11,9 +11,8 @@ interface CartState {
 }
 
 /**
- * Zustand store for managing the shopping cart state.
- * Adds items to the cart, removes items, updates item quantities, and clears the cart.
- * The cart state is persisted in local storage under the key "cart-storage".
+ * Zustand store for the shopping cart.
+ * Saves cart to localStorage so it stays after refresh.
  */
 const useCartStore = create<CartState>()(
   persist(

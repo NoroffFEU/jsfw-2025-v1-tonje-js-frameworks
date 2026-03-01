@@ -8,8 +8,7 @@ interface AddToCartButtonProps {
 }
 
 /**
- * Button that adds a product to the shopping cart using the Zustand store.
- * @param product - The product to add to the cart.
+ * Button that adds a product to the cart.
  * @returns The add to cart button component.
  */
 export default function AddToCartButton({ product }: AddToCartButtonProps) {
