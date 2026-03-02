@@ -9,6 +9,12 @@ interface SearchBarProps {
   products: Product[];
 }
 
+/**
+ * Search bar component that filters products by title as the user types.
+ * Displays a dropdown with up to 5 products matching the search term, showing their image and title.
+ * @param products - The list of products to search through.
+ * @returns The search bar component.
+ */
 export default function SearchBar({ products }: SearchBarProps) {
   const [searchTerm, setSearchTerm] = useState("");
 

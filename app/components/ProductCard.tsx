@@ -6,10 +6,17 @@ interface ProductCardProps {
   product: Product;
 }
 
+//* Calculates the discount percentage based on original and discounted prices.
 function getDiscountPercentage(price: number, discountedPrice: number): number {
   return Math.round(((price - discountedPrice) / price) * 100);
 }
 
+/**
+ * Displays the product as a clickable card with image, rating, title, and price.
+ * Shows a discount badge and crossed-out original price if the product is on sale.
+ * @param product - The product to display in the card.
+ * @returns The product card component.
+ */
 export default function ProductCard({ product }: ProductCardProps) {
   const hasDiscount = product.price > product.discountedPrice;
   const discount = hasDiscount
