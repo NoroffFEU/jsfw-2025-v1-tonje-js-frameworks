@@ -2,6 +2,7 @@
 import { fetchProducts } from "./services/api";
 import SearchBar from "./components/SearchBar";
 import ProductCard from "./components/ProductCard";
+import Image from "next/image"; 
 
 /**
  * The home page component that displays a hero section and a grid of product cards.
@@ -12,11 +13,25 @@ export default async function Home() {
 
   return (
     <main>
-      <section 
-        className="bg-card px-6 py-20 text-center md:py-32">
+      <section className="relative px-6 py-20 text-center md:py-32">
+        <Image
+          src="/images/hero.webp"
+          alt="Lifestyle products"
+          fill
+          priority
+          className="object-cover"
+        />
 
-        <h1 className="text-4xl font-bold uppercase tracking-tight md:text-6xl">Elevate Every Day</h1>
-        <p className="mx-auto mt-4 max-w-md text-text-secondary">Enjoy variety, quality, and convenience in one modern shopping destination.</p>
+        <div className="absolute inset-0 bg-white/70"></div>
+
+        <div className="relative z-10">
+          <h1 className="text-4xl font-bold uppercase tracking-tight md:text-6xl">
+            Elevate Every Day
+          </h1>
+          <p className="mx-auto mt-4 max-w-md text-text text: font-semibold">
+            Enjoy variety, quality, and convenience in one modern shopping destination.
+          </p>
+        </div>
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-12">
