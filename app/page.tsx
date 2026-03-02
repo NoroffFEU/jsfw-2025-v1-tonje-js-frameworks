@@ -1,17 +1,7 @@
 
-import { Product, ApiResponse } from "./interfaces/products";
+import { fetchProducts } from "./services/api";
 import SearchBar from "./components/SearchBar";
 import ProductCard from "./components/ProductCard";
-
-/**
- * Fetches products from the Noroff Online Shop API.
- * @returns A promise that resolves to an array of products.
- */
-async function fetchProducts(): Promise<Product[]> {
-  const response = await fetch("https://v2.api.noroff.dev/online-shop");
-  const json: ApiResponse = await response.json();
-  return json.data;
-}
 
 /**
  * The home page component that displays a hero section and a grid of product cards.

@@ -1,19 +1,7 @@
 import Image from "next/image";
-import type { Product, ApiSingleProductResponse } from "../../interfaces/products";
+import { fetchProduct } from "../../services/api";
 import AddToCartButton from "../../components/AddToCartButton";
 import BackButton from "../../components/BackButton";
-
-/**
- * Fetches a single product from the API by its ID.
- * @param id - The product ID to fetch.
- * @returns The product data.
- */
-async function getProduct(id: string): Promise<Product> {
-  const response = await fetch(`https://v2.api.noroff.dev/online-shop/${id}`);
-  const json: ApiSingleProductResponse = await response.json();
-  return json.data;
-}
-
 
 /**
  * Calculates the discount percentage based on the original price and the discounted price.
@@ -35,7 +23,7 @@ export default async function ProductPage({
   params: { id: string };
 }) {
   const { id } = await params;
-  const product = await getProduct(id);
+  const product = await fetchProduct(id);
 
   const hasDiscount = product.price > product.discountedPrice;
   const discount = hasDiscount
