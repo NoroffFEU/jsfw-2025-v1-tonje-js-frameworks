@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, DM_Sans, Spirax } from "next/font/google";
+import { Toaster } from "react-hot-toast";
 import "./globals.css";
 
 import Footer from "./components/Footer";
@@ -35,6 +36,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.variable} ${dmSans.variable} ${spirax.variable} flex min-h-screen flex-col`}>
         <Header />
+        <Toaster position="top-center" />
         <div className="flex-1">
           {children}
         </div>

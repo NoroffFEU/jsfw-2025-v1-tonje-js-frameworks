@@ -1,6 +1,7 @@
 "use client";
 
 import useCartStore from "../stores/cartStore";
+import toast from "react-hot-toast";
 import type { Product } from "../interfaces/products";
 
 interface AddToCartButtonProps {
@@ -23,6 +24,7 @@ export default function AddToCartButton({ product }: AddToCartButtonProps) {
       image: product.image,
       quantity: 1,
     });
+    toast.success(`${product.title} added to cart`);
   };
 
   return (

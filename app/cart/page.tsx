@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
 import useCartStore from "../stores/cartStore";
 
@@ -23,6 +24,11 @@ export default function CartPage() {
 
   const handleCheckout = () => {
     router.push("/checkout");
+  };
+
+  const handleRemove = (id: string, title: string) => {
+    removeItem(id);
+    toast.success(`${title} removed from cart`);
   };
 
   if (items.length === 0) {
@@ -83,7 +89,7 @@ export default function CartPage() {
             </div>
 
             <button
-              onClick={() => removeItem(item.id)}
+              onClick={() => handleRemove(item.id, item.title)}
               className="text-text-secondary hover:text-text"
               aria-label="Remove item"
             >

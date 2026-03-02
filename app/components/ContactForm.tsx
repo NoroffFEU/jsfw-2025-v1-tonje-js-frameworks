@@ -3,6 +3,7 @@
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
 import {contactSchema, type ContactFormData} from "../schemas/contact";
+import  toast from "react-hot-toast";
 
 /**
  * Contact form that checks if the user has filled in all fields correctly. 
@@ -28,7 +29,7 @@ export default function ContactForm() {
   });
 
   const onSubmit = (data: ContactFormData) => {
-    console.log("Form submitted:", data);
+    toast.success("Your message has been sent!");
     reset();
   };
 
