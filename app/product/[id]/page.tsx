@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { fetchProduct } from "../../services/api";
 import AddToCartButton from "../../components/AddToCartButton";
-import BackButton from "../../components/BackButton";
+import Breadcrumb from "../../components/Breadcrumb";
 
 /**
  * Calculates the discount percentage based on the original price and the discounted price.
@@ -40,7 +40,7 @@ export default async function ProductPage({
 
   return (
     <main className="mx-auto max-w-5xl px-6 py-12">
-      <BackButton />
+      <Breadcrumb productTitle={product.title} />
       <div className="flex flex-col gap-8 md:flex-row">
         <div className="relative aspect-square w-full md:w-1/2">
           {hasDiscount && (
