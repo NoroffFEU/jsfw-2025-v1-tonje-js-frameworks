@@ -29,7 +29,7 @@ export default function SearchBar({ products }: SearchBarProps) {
         placeholder="Search products"
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
-        className="w-full rounded-md border border-border bg-card px-4 py-2 pr-10 outline-none focus:border-accent"
+        className="w-full rounded-3xl border border-border bg-card px-4 py-2 pr-10 outline-none focus:border-accent"
       />
       <svg
         xmlns="http://www.w3.org/2000/svg"
