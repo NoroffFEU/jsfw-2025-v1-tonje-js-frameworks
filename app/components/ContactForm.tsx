@@ -106,7 +106,7 @@ export default function ContactForm() {
 
       <button
         type="submit"
-        className="w-full rounded-md bg-accent py-3 font-medium uppercase text-white hover:opacity-90"
+        className="w-full rounded-3xl bg-accent py-3 font-medium uppercase text-white hover:opacity-90"
       >
         Submit
       </button>
