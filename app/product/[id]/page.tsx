@@ -52,6 +52,7 @@ export default async function ProductPage({
             src={product.image.url}
             alt={product.image.alt}
             fill
+            sizes="(max-width: 768px) 100vw, 50vw"
             className="rounded-md object-cover"
           />
         </div>
@@ -59,7 +60,6 @@ export default async function ProductPage({
         <div className="flex flex-col gap-4 md:w-1/2">
           <h1 className="text-3xl font-bold uppercase">{product.title}</h1>
           <p className="text-text-secondary">{product.description}</p>
-
           <div className="flex items-center gap-3">
             <span className="text-2xl font-bold">
               {product.discountedPrice} kr
@@ -76,7 +76,7 @@ export default async function ProductPage({
               {product.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="rounded-md border border-border px-3 py-1 text-sm text-text-secondary"
+                  className="rounded-3xl border border-border px-3 py-1 text-sm text-text-secondary"
                 >
                   {tag}
                 </span>

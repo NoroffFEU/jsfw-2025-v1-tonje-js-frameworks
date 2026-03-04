@@ -9,9 +9,7 @@ export default function Footer() {
   return (
     <footer className="border-t border-border bg-background">
       <div className="mx-auto max-w-7xl px-6 py-12">
-
         <div className="grid gap-8 text-sm sm:grid-cols-2 lg:grid-cols-4">
-
           <div>
             <h4 className="mb-3 font-semibold uppercase">Company</h4>
             <ul className="space-y-2 text-text-secondary">
@@ -51,7 +49,6 @@ export default function Footer() {
               <li><Link href="/careers" className="hover:text-text hover:underline">Careers</Link></li>
             </ul>
           </div>
-
         </div>
 
         <div className="mt-8 border-t border-border pt-3 pb-2 text-center text-xs text-text-secondary">

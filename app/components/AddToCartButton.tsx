@@ -30,7 +30,7 @@ export default function AddToCartButton({ product }: AddToCartButtonProps) {
   return (
     <button
       onClick={handleAddToCart}
-      className="mt-2 w-full rounded-md bg-accent py-3 font-medium uppercase text-white hover:opacity-90"
+      className="mt-2 w-full rounded-3xl bg-accent py-3 font-medium uppercase text-white hover:opacity-90"
     >
       Add to Cart
     </button>

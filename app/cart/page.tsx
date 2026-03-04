@@ -18,8 +18,7 @@ export default function CartPage() {
   const router = useRouter();
 
   const totalPrice = items.reduce(
-    (sum, item) => sum + item.discountedPrice * item.quantity,
-    0
+    (sum, item) => sum + item.discountedPrice * item.quantity, 0
   );
 
   const handleCheckout = () => {
@@ -38,7 +37,7 @@ export default function CartPage() {
         <p className="text-text-secondary">Your cart is empty.</p>
         <Link
           href="/"
-          className="mt-6 inline-block rounded-md bg-accent px-6 py-3 text-white hover:opacity-90"
+          className="mt-6 inline-block rounded-3xl bg-accent px-6 py-3 text-white hover:opacity-90"
         >
           Shop now
         </Link>
@@ -105,7 +104,7 @@ export default function CartPage() {
         </p>
         <button
           onClick={handleCheckout}
-          className="mt-4 w-full rounded-md bg-accent py-3 font-medium uppercase text-white hover:opacity-90"
+          className="mt-4 w-full rounded-3xl bg-accent py-3 font-medium uppercase text-white hover:opacity-90"
         >
           Checkout
         </button>

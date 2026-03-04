@@ -19,7 +19,6 @@ export default function CheckoutSuccessPage() {
   return (
     <main className="mx-auto max-w-3xl px-6 py-20 text-center">
       <h1 className="text-3xl font-bold uppercase">Thank You For Your Order</h1>
-
       <div className="mx-auto mt-8 flex h-20 w-20 items-center justify-center rounded-full border-2 border-accent">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -44,7 +43,7 @@ export default function CheckoutSuccessPage() {
 
       <Link
         href="/"
-        className="mt-8 inline-block rounded-md bg-accent px-6 py-3 font-medium text-white hover:opacity-90"
+        className="mt-8 inline-block rounded-3xl bg-accent px-6 py-3 font-medium text-white hover:opacity-90"
       >
         Back to Shop
       </Link>
