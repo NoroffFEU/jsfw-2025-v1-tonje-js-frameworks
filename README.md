@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# JavaScript Frameworks Course Assignment - Alera Online Shop
+![image](https://i.imghippo.com/files/Wlai2192OQ.png)
+
+## Description 
+Alera is a online shop built with Next.js, TypeScript, and Tailwind CSS as the course assignment for the JavaScript Frameworks course at Noroff. 
+The application fetches products from the Noroff Online Shop API. The shop features a product list page with search, a detailed product page with reviews and tags, and a shopping cart with quantity management and persistent state using Zustand. Users can complete a checkout flow, and theres a validated contact form available for customers. 
+
+Live Demo: alera-online-shop.vercel.app
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites 
+- Node.js (v18+)
+- npm
 
+### Installing
+
+Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/NoroffFEU/jsfw-2025-v1-tonje-js-frameworks.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Start the development server:
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Available Scripts
+- `npm run dev` – Start Next.js development server
+- `npm run build` – Build for production
+- `npm start` – Run production build
+- `npm run lint` – Run ESLint
 
-## Learn More
+## Features
+- Browse a list of products with search function
+- View a detailed product page with title, description, price, tags and rating. 
+- Add and remove items from the shopping cart
+- Adjust quantities and view total cost in shopping cart.
+- Complete a checkout flow
+- Contact form with validation
 
-To learn more about Next.js, take a look at the following resources:
+## Project Structure
+```
+src/
+├── app/
+│   ├── about/          → About page
+│   ├── cart/           → Cart page
+│   ├── checkout/       → Checkout success page
+│   ├── contact/        → Contact page
+│   ├── components/     → Reusable UI components
+│   ├── interfaces/     → TypeScript interfaces
+│   ├── product/[id]/   → Product detail page
+│   ├── schemas/        → Zod validation schemas
+│   ├── services/       → API calls
+│   ├── stores/         → Zustand cart store
+│   └── sustainability/ → Sustainability page
+└── public/
+    └── images/             → Static images
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Tech Stack
+- React
+- Next.js (App Router)
+- TypeScript
+- Tailwind CSS
+- Zustand
+- React Hook Form + Zod
+- react-hot-toast
+- Vercel 
+- Noroff Online shop API
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Contact
+Tonje Schjefstad
+Frontend Development Student — Noroff School of Technology and Digital Media
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- LinkedIn: https://www.linkedin.com/in/tonjeschjefstad/
+- GitHub: https://github.com/TonjeSchjefstad
+- Student email: tonsch03841@stud.noroff.no
